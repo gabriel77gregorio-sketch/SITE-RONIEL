@@ -1,0 +1,281 @@
+---
+// ContactForm.astro
+---
+
+<section id="contato" class="contato-section">
+  <div class="container">
+    <div class="header">
+      <h2>Conte seu caso para a nossa equipe.</h2>
+      <p>Preencha os campos abaixo para um primeiro contato confidencial ou envie uma mensagem diretamente para o WhatsApp.</p>
+    </div>
+
+    <div class="content-grid">
+      <div class="form-wrapper">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp com DDD</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 90000-0000" />
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área de interesse</label>
+            <select id="area" name="area" required>
+              <option value="" disabled selected>Selecione...</option>
+              <option value="Trabalhista">Trabalhista</option>
+              <option value="Previdenciário">Previdenciário</option>
+              <option value="Cível">Cível</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="resumo">Breve resumo da situação</label>
+            <textarea id="resumo" name="resumo" rows="4" placeholder="Descreva brevemente o seu caso"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar Mensagem para Análise</button>
+        </form>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="contact-info">
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <p>Av. Vida Nova, 28 – Sala 412B – Jardim Maria Rosa, Taboão da Serra - SP, 06764-045</p>
+          </div>
+          
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <p>(11) 98091-3894</p>
+          </div>
+
+          <div class="info-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <p>Segunda a Sexta, das 09h às 18h</p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.226388414578!2d-46.772594424667595!3d-23.632057778751508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce538dfdb55ba3%3A0x633513a0c7c0065a!2sAv.%20Vida%20Nova%2C%2028%20-%20Jardim%20Maria%20Rosa%2C%20Tabo%C3%A3o%20da%20Serra%20-%20SP%2C%2006764-045!5e0!3m2!1sen!2sbr!4v1715800000000!5m2!1sen!2sbr" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form');
+  
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const nome = (document.getElementById('nome') as HTMLInputElement).value;
+      const telefone = (document.getElementById('telefone') as HTMLInputElement).value;
+      const area = (document.getElementById('area') as HTMLSelectElement).value;
+      const resumo = (document.getElementById('resumo') as HTMLTextAreaElement).value;
+      
+      const mensagem = `Olá! Meu nome é ${nome}.\nTelefone: ${telefone}\nÁrea: ${area}\nResumo: ${resumo}`;
+      const url = `https://wa.me/5511980913894?text=${encodeURIComponent(mensagem)}`;
+      
+      window.open(url, '_blank');
+    });
+  }
+</script>
+
+<style>
+  :root {
+    --navy: #0d2137;
+    --petrol: #1a3a5c;
+    --gold: #b8943e;
+    --gray-light: #f4f5f7;
+    --gray-medium: #6b7280;
+    --white: #ffffff;
+    --graphite: #374151;
+  }
+
+  .contato-section {
+    background-color: var(--white);
+    padding: 3rem 1.5rem;
+    color: var(--graphite);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .header h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .header p {
+    font-size: 1rem;
+    color: var(--gray-medium);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  /* Form Styles */
+  .form-wrapper {
+    background: var(--white);
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px; /* Evita zoom no iOS */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit;
+    color: var(--graphite);
+    background-color: var(--white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184, 148, 62, 0.1);
+  }
+
+  .btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: var(--navy);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--petrol);
+  }
+
+  /* Info Styles */
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .info-item .icon {
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .info-item p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    display: block;
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) {
+    .contato-section {
+      padding: 4rem 2rem;
+    }
+
+    .header h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .content-grid {
+      flex-direction: row;
+      gap: 4rem;
+    }
+
+    .form-wrapper,
+    .info-wrapper {
+      flex: 1;
+    }
+
+    .btn-primary {
+      width: auto;
+    }
+  }
+</style>

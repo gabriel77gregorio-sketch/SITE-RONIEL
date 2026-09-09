@@ -1,0 +1,155 @@
+---
+---
+<section id="inicio" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="badge">
+      <span>⭐⭐⭐⭐⭐ 5.0 estrelas no Google com avaliações verificadas de clientes</span>
+    </div>
+    
+    <h1 class="headline">
+      Defesa jurídica estratégica, técnica e humanizada para proteger seus direitos.
+    </h1>
+    
+    <p class="sub-headline">
+      Atuação especializada em Direito Trabalhista, Previdenciário e Cível, combinando rigor jurídico e suporte técnico pericial para oferecer segurança em cada etapa do seu processo.
+    </p>
+    
+    <a href="https://wa.me/5511980913894?text=Olá!%20Gostaria%20de%20analisar%20meu%20caso" class="cta-button" target="_blank" rel="noopener noreferrer">
+      Analisar Meu Caso pelo WhatsApp
+    </a>
+    
+    <p class="micro-copy">
+      Atendimento sigiloso, ágil e em total conformidade com a OAB.
+    </p>
+  </div>
+</section>
+
+<style>
+  :root {
+    --navy: #0d2137;
+    --petrol: #1a3a5c;
+    --gold: #b8943e;
+    --gray-light: #f4f5f7;
+    --gray-medium: #6b7280;
+    --white: #ffffff;
+    --graphite: #374151;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem 4rem; /* Top padding to account for fixed header */
+    background: linear-gradient(135deg, var(--navy) 0%, var(--petrol) 100%);
+    overflow: hidden;
+  }
+
+  /* Placeholder for future background image */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 33, 55, 0.7);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+  }
+
+  .badge span {
+    color: var(--white);
+    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  .headline {
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .sub-headline {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+    background-color: var(--gold);
+    color: var(--navy);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button:hover {
+    background-color: #c9a550;
+    transform: translateY(-2px);
+  }
+
+  .micro-copy {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .hero {
+      height: 100vh;
+      padding-top: 8rem;
+    }
+
+    .sub-headline {
+      font-size: 1.125rem;
+      max-width: 100%;
+    }
+
+    .cta-button {
+      display: inline-block;
+      width: auto;
+      padding: 1.25rem 3rem;
+    }
+    
+    .badge span {
+      font-size: 0.875rem;
+    }
+  }
+</style>
