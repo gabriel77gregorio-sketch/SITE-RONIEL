@@ -3,57 +3,74 @@
 <section class="differentials">
   <div class="differentials-container">
     <div class="card">
-      <div class="icon-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
+      <div class="card-inner">
+        <div class="icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h3 class="card-title">Atendimento Personalizado</h3>
+        <p class="card-text">Análise aprofundada de cada caso diretamente por advogados especialistas, com foco total na sua situação.</p>
       </div>
-      <h3 class="card-title">Atendimento Personalizado</h3>
-      <p class="card-text">Análise aprofundada de cada caso diretamente por advogados especialistas.</p>
     </div>
 
     <div class="card">
-      <div class="icon-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          <path d="m9 12 2 2 4-4"></path>
-        </svg>
+      <div class="card-inner">
+        <div class="icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+        <h3 class="card-title">Assessoria Jurídica Completa</h3>
+        <p class="card-text">Atendimento abrangente em direito do trabalho, direito de família e assessoria empresarial sob o mesmo teto.</p>
       </div>
-      <h3 class="card-title">Suporte Técnico Integrado</h3>
-      <p class="card-text">Contamos com Técnico em Segurança do Trabalho próprio para perícias trabalhistas e laudos técnicos precisos.</p>
     </div>
 
     <div class="card">
-      <div class="icon-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-          <polyline points="10 9 9 9 8 9"></polyline>
-        </svg>
+      <div class="card-inner">
+        <div class="icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <h3 class="card-title">Transparência Total</h3>
+        <p class="card-text">Acompanhamento claro e descomplicado do andamento de cada processo, sem termos inacessíveis.</p>
       </div>
-      <h3 class="card-title">Transparência Total</h3>
-      <p class="card-text">Acompanhamento claro e descomplicado do andamento de cada processo.</p>
     </div>
   </div>
 </section>
 
 <style>
-  :root {
-    --navy: #0d2137;
-    --petrol: #1a3a5c;
-    --gold: #b8943e;
-    --gray-light: #f4f5f7;
-    --gray-medium: #6b7280;
-    --white: #ffffff;
-    --graphite: #374151;
+  .differentials {
+    background-color: var(--black, #0a0a0a);
+    padding: 4rem 1.5rem;
+    position: relative;
   }
 
-  .differentials {
-    background-color: var(--navy);
-    padding: 4rem 1.5rem;
+  .differentials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.12), transparent);
+  }
+
+  .differentials::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.12), transparent);
   }
 
   .differentials-container {
@@ -61,50 +78,101 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 2rem 1.5rem;
-    border-top: 3px solid var(--gold);
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.015) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2.5rem 1.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    box-shadow: 
+      0 12px 36px rgba(0, 0, 0, 0.35),
+      inset 0 1px 2px rgba(255, 255, 255, 0.25),
+      inset 0 0 16px rgba(255, 255, 255, 0.02);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 
+      0 20px 48px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(192, 192, 192, 0.1),
+      inset 0 1px 3px rgba(255, 255, 255, 0.45);
   }
 
   .icon-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(26, 42, 74, 0.45) 0%, rgba(10, 15, 30, 0.6) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover .icon-wrapper {
+    background: linear-gradient(135deg, rgba(26, 42, 74, 0.7) 0%, rgba(42, 58, 90, 0.5) 100%);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(42, 58, 90, 0.4);
   }
 
   .icon {
-    width: 40px;
-    height: 40px;
-    color: var(--gold);
+    width: 28px;
+    height: 28px;
+    color: var(--silver, #c0c0c0);
   }
 
   .card-title {
-    color: var(--white);
+    color: var(--white, #ffffff);
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     line-height: 1.3;
   }
 
   .card-text {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--silver-dark, #8a8a8a);
     font-family: 'Inter', sans-serif;
-    font-size: 0.9375rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 300;
   }
 
   /* Tablet and Desktop */
@@ -112,22 +180,22 @@
     .differentials-container {
       flex-direction: row;
       justify-content: space-between;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .card {
       flex: 1;
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 1.75rem;
     }
   }
 
   @media (min-width: 1024px) {
     .differentials {
-      padding: 6rem 1.5rem;
+      padding: 5rem 1.5rem;
     }
     
     .differentials-container {
-      gap: 2rem;
+      gap: 1.5rem;
     }
   }
 </style>

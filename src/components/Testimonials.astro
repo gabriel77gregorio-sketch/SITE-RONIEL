@@ -17,31 +17,34 @@
     <div class="cards-grid">
       <!-- Card 1 -->
       <div class="card">
+        <div class="card-glass-shine"></div>
         <div class="card-stars">★★★★★</div>
         <p class="quote">Fui muito bem atendida desde o primeiro contato. Os advogados explicaram tudo com clareza e obtive um resultado excelente na minha causa trabalhista. Recomendo de olhos fechados!</p>
         <div class="author-info">
           <span class="name">Maria S.</span>
-          <span class="context">Causa Trabalhista</span>
+          <span class="context">Direito do Trabalho</span>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="card">
+        <div class="card-glass-shine"></div>
         <div class="card-stars">★★★★★</div>
-        <p class="quote">Depois de meses tentando resolver sozinho minha aposentadoria, procurei o escritório e em pouco tempo tudo foi resolvido. Profissionais sérios e muito dedicados.</p>
+        <p class="quote">Consegui resolver meu divórcio de forma consensual e tranquila, graças ao suporte da equipe. O processo de separação amigável foi conduzido com muita empatia e profissionalismo.</p>
         <div class="author-info">
-          <span class="name">José C.</span>
-          <span class="context">Aposentadoria INSS</span>
+          <span class="name">Fernanda L.</span>
+          <span class="context">Divórcio Consensual</span>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="card">
+        <div class="card-glass-shine"></div>
         <div class="card-stars">★★★★★</div>
-        <p class="quote">Pontualidade, transparência e muita competência. Sempre me mantiveram informada sobre cada etapa do processo. Sou muito grata pela dedicação de toda a equipe.</p>
+        <p class="quote">Contratei a assessoria empresarial para minha empresa e foi a melhor decisão. Revisaram todos os contratos, organizaram a parte trabalhista e hoje temos total segurança jurídica.</p>
         <div class="author-info">
-          <span class="name">Ana P.</span>
-          <span class="context">Causa Cível</span>
+          <span class="name">Ricardo M.</span>
+          <span class="context">Assessoria Empresarial</span>
         </div>
       </div>
     </div>
@@ -50,8 +53,19 @@
 
 <style>
   .testimonials {
-    background-color: var(--gray-light, #f4f5f7);
-    padding: 4rem 1.5rem;
+    background-color: var(--dark, #1a1a1a);
+    padding: 5rem 1.5rem;
+    position: relative;
+  }
+
+  .testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.12), transparent);
   }
   
   .container {
@@ -61,12 +75,12 @@
   
   .header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
   
   .header h2 {
     font-family: 'Playfair Display', serif;
-    color: var(--navy, #0d2137);
+    color: var(--white, #ffffff);
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
   }
@@ -75,15 +89,19 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: var(--navy, #0d2137);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
     color: var(--white, #ffffff);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   
   .google-icon {
     font-weight: 700;
     font-size: 1.5rem;
+    color: var(--silver, #c0c0c0);
   }
   
   .google-rating {
@@ -95,40 +113,70 @@
   .score {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--white, #ffffff);
   }
   
   .stars {
-    color: var(--gold, #b8943e);
+    color: var(--silver, #c0c0c0);
     font-size: 1.25rem;
     letter-spacing: 2px;
   }
   
   .google-text {
     font-size: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.6;
   }
   
   .cards-grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .card {
-    background-color: var(--white, #ffffff);
-    border-radius: 12px;
-    padding: 2.5rem 2rem 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.015) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2.5rem 2rem 2rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 
+      0 12px 36px rgba(0, 0, 0, 0.35),
+      inset 0 1px 2px rgba(255, 255, 255, 0.25),
+      inset 0 0 16px rgba(255, 255, 255, 0.02);
+  }
+
+  .card-glass-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
+    pointer-events: none;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 
+      0 20px 48px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(192, 192, 192, 0.1),
+      inset 0 1px 3px rgba(255, 255, 255, 0.45);
   }
   
   .card::before {
     content: '"';
     font-size: 5rem;
-    color: var(--gold, #b8943e);
-    opacity: 0.2;
+    color: var(--silver, #c0c0c0);
+    opacity: 0.08;
     position: absolute;
     top: -0.5rem;
     left: 1.5rem;
@@ -137,8 +185,8 @@
   }
   
   .card-stars {
-    color: var(--gold, #b8943e);
-    font-size: 1.25rem;
+    color: var(--silver, #c0c0c0);
+    font-size: 1.125rem;
     letter-spacing: 2px;
     margin-bottom: 1rem;
     z-index: 1;
@@ -146,11 +194,13 @@
   
   .quote {
     font-style: italic;
-    color: var(--graphite, #374151);
-    line-height: 1.6;
+    color: var(--silver-dark, #8a8a8a);
+    line-height: 1.65;
     margin-bottom: 2rem;
     flex-grow: 1;
     z-index: 1;
+    font-weight: 300;
+    font-size: 0.95rem;
   }
   
   .author-info {
@@ -160,13 +210,15 @@
   }
   
   .name {
-    font-weight: 700;
-    color: var(--navy, #0d2137);
+    font-weight: 600;
+    color: var(--white, #ffffff);
+    font-size: 0.95rem;
   }
   
   .context {
-    font-size: 0.875rem;
-    color: var(--gray-medium, #6b7280);
+    font-size: 0.8rem;
+    color: var(--silver-dark, #8a8a8a);
+    margin-top: 0.15rem;
   }
 
   @media (min-width: 768px) {
@@ -176,6 +228,10 @@
   }
 
   @media (min-width: 1024px) {
+    .testimonials {
+      padding: 6rem 1.5rem;
+    }
+
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
