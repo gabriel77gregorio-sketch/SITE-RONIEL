@@ -3,7 +3,7 @@
 <header id="main-header">
   <div class="header-container">
     <div class="logo">
-      <a href="#inicio">
+      <a href="/">
         <img src="/logo-header.png" alt="Roniell & Almeida - Advocacia e Consultoria" class="logo-img" />
       </a>
     </div>
@@ -16,11 +16,11 @@
 
     <nav class="main-nav" id="main-nav">
       <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#areas">Áreas de Atuação</a></li>
-        <li><a href="#escritorio">O Escritório</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="/#inicio">Início</a></li>
+        <li><a href="/#areas">Áreas de Atuação</a></li>
+        <li><a href="/#escritorio">O Escritório</a></li>
+        <li><a href="/#depoimentos">Depoimentos</a></li>
+        <li><a href="/#contato">Contato</a></li>
       </ul>
       <a href="https://wa.me/5511980913894?text=Olá!%20Gostaria%20de%20uma%20orientação%20jurídica" class="cta-button" target="_blank" rel="noopener noreferrer">Falar com um Advogado</a>
     </nav>
@@ -101,10 +101,14 @@
   }
 
   .logo-img {
-    height: 40px;
+    height: 44px;
     width: auto;
     object-fit: contain;
-    transition: opacity 0.3s ease;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+
+  header.scrolled .logo-img {
+    height: 38px;
   }
 
   .logo-img:hover {
@@ -222,7 +226,11 @@
     }
 
     .logo-img {
-      height: 48px;
+      height: 56px;
+    }
+
+    header.scrolled .logo-img {
+      height: 46px;
     }
 
     .main-nav {

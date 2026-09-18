@@ -9,7 +9,7 @@
       <!-- Coluna 1: Institucional -->
       <div class="footer-col brand-col">
         <a href="#inicio" class="footer-logo-link">
-          <img src="/logo-dark.png" alt="Roniell & Almeida - Advocacia e Consultoria" class="footer-logo" />
+          <img src="/logo-header.png" alt="Roniell & Almeida - Advocacia e Consultoria" class="footer-logo" />
         </a>
         <p class="registry">Dr. Cleber Almeida — OAB/SP 534.294</p>
       </div>
@@ -18,9 +18,10 @@
       <div class="footer-col links-col">
         <h3 class="col-title">Links Rápidos</h3>
         <nav class="footer-nav">
-          <a href="#areas">Áreas de Atuação</a>
-          <a href="#escritorio">O Escritório</a>
-          <a href="#contato">Contato</a>
+          <a href="/#areas">Áreas de Atuação</a>
+          <a href="/#escritorio">O Escritório</a>
+          <a href="/#contato">Contato</a>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
           <a href="https://wa.me/5511980913894?text=Ol%C3%A1!%20Gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </nav>
       </div>
@@ -42,9 +43,13 @@
       <p class="ethics-text">
         Este site possui caráter meramente informativo e orientativo, em conformidade com o Código de Ética e Disciplina da OAB.
       </p>
-      <p class="copyright">
-        &copy; 2025 Roniell & Almeida. Todos os direitos reservados.
-      </p>
+      <div class="footer-legal">
+        <p class="copyright">
+          &copy; 2025 Roniell & Almeida Advocacia e Consultoria. Todos os direitos reservados.
+        </p>
+        <span class="divider-dot">•</span>
+        <a href="/politica-de-privacidade" class="privacy-link">Política de Privacidade (LGPD)</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -87,11 +92,11 @@
   }
 
   .footer-logo {
-    height: 60px;
+    height: 52px;
     width: auto;
     object-fit: contain;
     margin: 0 auto;
-    opacity: 0.9;
+    opacity: 0.95;
     transition: opacity 0.3s ease;
   }
 
@@ -167,10 +172,35 @@
     line-height: 1.5;
   }
 
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
   .copyright {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.35);
     font-size: 0.75rem;
     margin: 0;
+  }
+
+  .divider-dot {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+  }
+
+  .privacy-link {
+    color: var(--silver, #c0c0c0);
+    font-size: 0.75rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+
+  .privacy-link:hover {
+    color: var(--white, #ffffff);
   }
 
   /* Desktop */
