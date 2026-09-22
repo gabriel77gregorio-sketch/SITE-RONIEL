@@ -18,7 +18,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     
     <!-- Canonical -->
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://roniellalmeida.com.br')} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://www.roniellealmeida.com.br')} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0a0a0a" />
     
@@ -27,9 +27,10 @@ const { title, description } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site || 'https://roniellalmeida.com.br')} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site || 'https://www.roniellealmeida.com.br')} />
     <meta property="og:site_name" content="Roniell & Almeida Advocacia" />
-    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site || 'https://roniellalmeida.com.br')} />
+    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.roniellealmeida.com.br')} />
+    <meta property="og:image:secure_url" content={new URL('/og-image.jpg', Astro.site || 'https://www.roniellealmeida.com.br')} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -39,7 +40,7 @@ const { title, description } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('/og-image.jpg', Astro.site || 'https://roniellalmeida.com.br')} />
+    <meta name="twitter:image" content={new URL('/og-image.jpg', Astro.site || 'https://www.roniellealmeida.com.br')} />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo-icon.png" />
